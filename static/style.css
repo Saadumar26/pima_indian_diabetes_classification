@@ -1,0 +1,148 @@
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Container Card */
+.container {
+    background-color: #ffffffdd;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+
+    margin: 60px auto 20px auto;  /* <-- Top = 60px, Bottom = 20px */
+    flex: 1;   /* Don’t stretch, just sit naturally */
+}
+
+/* Heading */
+.container h2 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 28px;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Input Fields */
+input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 8px rgba(37, 117, 252, 0.3);
+    outline: none;
+}
+
+/* Submit Button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2575fc;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #6a11cb;
+    transform: translateY(-2px);
+}
+
+/* Result Box */
+.result {
+    background-color: #f1f1f1;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #f1f1f1;
+    font-size: 14px;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer .tech-stack {
+    font-size: 13px;
+    color: #ccc;
+}
+
+footer .tech-stack span {
+    color: #ffd700; /* golden highlight */
+    font-weight: 500;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+footer .social-links a:hover {
+    color: #ffd700; /* golden hover effect */
+}
+
+.result span {
+    color: #2575fc;
+}
+
+/* Risk Level Colors */
+.result.Low-Risk {
+    border-left: 5px solid #28a745; /* Green */
+    background-color: #e6f7ea;
+}
+
+.result.Medium-Risk {
+    border-left: 5px solid #ffc107; /* Orange */
+    background-color: #fff8e1;
+}
+
+.result.High-Risk {
+    border-left: 5px solid #dc3545; /* Red */
+    background-color: #f8d7da;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disease Prediction App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Disease Prediction</h2>
+        <p class="subtitle">Enter patient details to predict the possibility of diabetes.</p>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <input type="number" step="any" name="Pregnancies" placeholder="Pregnancies" required>
+                <input type="number" step="any" name="Glucose" placeholder="Glucose" required>
+                <input type="number" step="any" name="BloodPressure" placeholder="Blood Pressure" required>
+                <input type="number" step="any" name="SkinThickness" placeholder="Skin Thickness" required>
+                <input type="number" step="any" name="Insulin" placeholder="Insulin" required>
+                <input type="number" step="any" name="BMI" placeholder="BMI" required>
+                <input type="number" step="any" name="DiabetesPedigreeFunction" placeholder="Diabetes Pedigree Function" required>
+                <input type="number" step="any" name="Age" placeholder="Age" required>
+            </div>
+            <input type="submit" value="Predict" class="btn">
+        </form>
+
+        {% if prediction %}
+        <div class="result {{ risk|replace(' ', '-') }}">
+            <p>Prediction: <span>{{ prediction }}</span></p>
+            <p>Probability: <span>{{ probability }}</span></p>
+            <p>Risk Level: <span>{{ risk }}</span></p>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Footer -->
+<footer>
+  <p>
+    Built with <span style="color:#ff4b5c;">❤</span> by 
+    <strong>M. Saad Umar</strong>
+  </p>
+
+  <p class="tech-stack">
+    Powered by <span>Flask</span> | <span>Scikit-learn</span> | 
+    <span>Joblib</span> | <span>HTML</span> | <span>CSS</span>
+  </p>
+
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/muhammad-saad-umar-632a4a28a/" target="_blank" title="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/Saadumar26" target="_blank" title="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+</footer>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+</body>
+</html>
