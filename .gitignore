@@ -1,0 +1,42 @@
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Flask instance folder (if used)
+instance/
+
+# Model and scaler files
+*.pkl
+*.joblib
+
+# Dataset files
+*.csv
+*.tsv
+*.xlsx
+*.xls
+
+# Logs
+*.log
+
+# System/OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE/editor configs
+.vscode/
+.idea/
+
+# PyCharm project settings
+*.iml
